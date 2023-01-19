@@ -11,14 +11,16 @@ function HomePage() {
           });
       }, []);
 
-      
+      console.log(pokemons[0])
   return (
     <div>
-         <ul>
-            {pokemons.map((pokemon)=>
-                <li>{pokemon[0].name}</li>
-            )}
-        </ul> 
+         <div>
+            {pokemons.map((pokemon, index)=>(
+                <ul key={index}>
+                    <li>{pokemon[0].name}</li>
+                </ul>
+            ))}
+        </div> 
     </div>
   )
 }
