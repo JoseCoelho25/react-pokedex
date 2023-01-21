@@ -18,12 +18,11 @@ function Card() {
     };
   return (
     <div>
-         <div className="container grid grid-cols-4">
+         <div className="container grid grid-cols-4 mx-auto">
             {pokemons.map((p, index)=>(
                 <div key={index}>
                       <img src={p.data.sprites.front_default} alt={p.name} />
                      <h3>{p.data.name}</h3>
-                     
                 </div>             
             ))}
         </div> 

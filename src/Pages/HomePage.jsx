@@ -1,6 +1,5 @@
 import React from 'react'
 import Card from '../Components/Card';
-
 import MainLayout from '../MainLayout/MainLayout';
 
 function HomePage() {
