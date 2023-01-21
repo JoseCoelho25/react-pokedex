@@ -1,8 +1,12 @@
 import React from 'react'
+import Navbar from '../Components/Navbar'
 
-function MainLayout() {
+function MainLayout({children}) {
   return (
-    <div>MainLayout</div>
+    <div className="MainLayout">
+      <Navbar/>
+      <main>{children}</main>
+    </div>
   )
 }
 
