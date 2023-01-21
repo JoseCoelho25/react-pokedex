@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from 'react'
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 function Card() {
     const [pokemons, setPokemons] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(()=>{
+        setLoading(true);
         getPokemons();
     },[])
   
@@ -13,17 +16,21 @@ function Card() {
         for(let i=1; i <152; i++){
             endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
         }
-        const response = axios.all(endpoints.map((endpoint)=> axios.get(endpoint))).then((res)=>setPokemons(res));
-        return response;
+        axios.all(endpoints.map((endpoint)=> axios.get(endpoint)))
+        .then((res)=>{
+            setPokemons(res);
+            setLoading(false);
+        });
     };
   return (
     <div>
-         <div className="container grid grid-cols-4 mx-auto">
+        {loading && <div>Loading...</div>}
+        <div className="container grid grid-cols-8 mx-auto border-2">
             {pokemons.map((p, index)=>(
-                <div key={index}>
+                <Link to={`/pokemon/${p.data.id}`} key={index}>
                       <img src={p.data.sprites.front_default} alt={p.name} />
                      <h3>{p.data.name}</h3>
-                </div>             
+                </Link>             
             ))}
         </div> 
     </div>
