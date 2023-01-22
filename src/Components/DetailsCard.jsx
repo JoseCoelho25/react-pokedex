@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import PokeTypes from '../Components/PokeTypes';
 import PokeAbility from './PokeAbility';
 import PokeGender from './PokeGender';
+import PokeSpecies from './PokeSpecies';
 
 
 function DetailsCard() {
@@ -28,6 +29,7 @@ function DetailsCard() {
         <PokeTypes pokemon={pokemon} />
         <PokeAbility pokemon={pokemon}/>
         <PokeGender pokemon={pokemon}/>
+        <PokeSpecies pokemon={pokemon}/>
       </div>
     );
   }
