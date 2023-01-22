@@ -22,6 +22,7 @@ function Card() {
             setLoading(false);
         });
     };
+   
   return (
     <div>
         {loading && <div>Loading...</div>}
@@ -30,6 +31,7 @@ function Card() {
                 <Link to={`/pokemon/${p.data.id}`} key={index}>
                       <img src={p.data.sprites.front_default} alt={p.name} />
                      <h3>{p.data.name}</h3>
+                    
                 </Link>             
             ))}
         </div> 
