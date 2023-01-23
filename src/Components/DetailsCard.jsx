@@ -7,6 +7,7 @@ import PokeGender from './PokeGender';
 import PokeSpecies from './PokeSpecies';
 import PokeEggs from './PokeEggs';
 import PokeHatch from './PokeHatch';
+import PokeDimensions from './PokeDimensions';
 
 
 function DetailsCard() {
@@ -24,6 +25,7 @@ function DetailsCard() {
     return (
         <div>
         <h1>{pokemon.name}</h1>
+        <h2>{pokemon.id}</h2>
         {/* ternary operator to allow the request for the API sprites */}
         {pokemon.sprites && pokemon.sprites.front_default ? 
          <img src={pokemon.sprites.front_default} alt={pokemon.name} className="w-1/5"/>:
@@ -35,6 +37,7 @@ function DetailsCard() {
         <div>Breeding</div>
         <PokeEggs pokemon={pokemon}/>
         <PokeHatch pokemon={pokemon}/>
+        <PokeDimensions pokemon={pokemon}/>
       </div>
     );
   }
