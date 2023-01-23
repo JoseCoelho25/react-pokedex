@@ -5,6 +5,7 @@ import PokeTypes from '../Components/PokeTypes';
 import PokeAbility from './PokeAbility';
 import PokeGender from './PokeGender';
 import PokeSpecies from './PokeSpecies';
+import PokeEggs from './PokeEggs';
 
 
 function DetailsCard() {
@@ -30,6 +31,7 @@ function DetailsCard() {
         <PokeAbility pokemon={pokemon}/>
         <PokeGender pokemon={pokemon}/>
         <PokeSpecies pokemon={pokemon}/>
+        <PokeEggs pokemon={pokemon}/>
       </div>
     );
   }
