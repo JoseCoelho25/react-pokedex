@@ -23,8 +23,11 @@ function PokeAbility({ pokemon }) {
            {pokemonAbility.map((ability)=>(
             <div key={ability.name}>
                 <p>{ability.name}</p>
+                {/* needed a filter to display only the content in english */}
                 {ability.effect_entries.length !== 0? 
-                <p>{ability.effect_entries[1].effect}</p>
+                ability.effect_entries
+                .filter(entry => entry.language.name === "en")
+                .map(entry => <p>{entry.effect}</p>)
                 :''}
             </div>
             ))}
