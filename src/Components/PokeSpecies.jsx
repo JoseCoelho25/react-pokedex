@@ -18,6 +18,7 @@ const PokeSpecies = ({ pokemon }) => {
       {pokemonSpecies.capture_rate ? (
         <div>
           <p>Capture Rate: {pokemonSpecies.capture_rate}</p>
+          <p>Percentage Capture rate : {Math.round(pokemonSpecies.capture_rate/255*100)}%</p>
         </div>
       ) : (
         ""
