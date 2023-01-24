@@ -19,7 +19,7 @@ const PokeTypes = ({ pokemon }) => {
   return (
     <div>
       {pokemonTypes.length !== 0 ? (
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-2 gap-x-2">
           {pokemonTypes.map((type) => (
             <div key={type}>{type.charAt(0).toUpperCase()+type.slice(1)}</div>
           ))}

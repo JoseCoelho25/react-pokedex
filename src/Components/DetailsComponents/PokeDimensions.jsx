@@ -17,8 +17,9 @@ function PokeDimensions({pokemon}) {
         </div>
         
       </div>
+      <div className="text-center font-bold">Stats</div>
         {pokemon.stats ? (
-            <div className="flex"> {pokemon.stats.length !== 0 ? pokemon.stats.map(entries=> <div key={keygen()} className="grid grid-cols-2 gap-x-2">{entries.base_stat}{entries.stat.name}</div>) : ""}</div>
+            <div className="grid grid-cols-6"> {pokemon.stats.length !== 0 ? pokemon.stats.map(entries=> <div key={keygen()} className="text-center">{entries.base_stat}{entries.stat.name}</div>) : ""}</div>
         ):""}
     </div>
   )
