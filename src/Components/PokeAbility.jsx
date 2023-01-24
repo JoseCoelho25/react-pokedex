@@ -19,10 +19,12 @@ function PokeAbility({ pokemon }) {
         }
       }, [pokemon]);
 
+      console.log(pokemonAbility.length)
   return (
     <div>
         {pokemonAbility.length !== 0 ?
-         <div className="grid grid-cols-2">
+        // ternary to display in 3 columns if the ability length is over 2
+         <div className={`grid ${pokemonAbility.length > 2 ? `grid-cols-3` : `grid-cols-2`}`}>
            {pokemonAbility.map((ability)=>(
             <div key={keygen()}>
                 <p className="font-bold ml-2">{ability.name.charAt(0).toUpperCase()+ability.name.slice(1)}</p>

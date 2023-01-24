@@ -19,6 +19,7 @@ function DetailsCard() {
       axios
         .get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
         .then(response => {
+          // had to do the uppercase here in useeffect because of the pokemon initial rendering
           response.data.name = response.data.name.charAt(0).toUpperCase() + response.data.name.slice(1);
           setPokemon(response.data)
         })
@@ -28,7 +29,7 @@ function DetailsCard() {
     
       
     return (
-      <div className="container mx-auto w-1/2">
+      <div className="container mx-auto w-full">
         <PokeNameId pokemon={pokemon}/>
         
         {/* ternary operator to allow the request for the API sprites */}
