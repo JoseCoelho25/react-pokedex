@@ -16,9 +16,10 @@ const PokeEggs = ({ pokemon }) => {
   
   return (
     <div>
+      <div className="font-bold text-center">Egg Groups</div>
        {pokemonEggs.egg_groups ? (
         <div >
-          <div className="flex">Egg groups: {pokemonEggs.egg_groups.length !== 0 ? pokemonEggs.egg_groups.map(entries=> <p key={entries.name} >{entries.name}</p>) : ""}</div>
+          <div className="flex justify-center gap-x-2">{pokemonEggs.egg_groups.length !== 0 ? pokemonEggs.egg_groups.map(entries=> <p key={entries.name} >{entries.name.charAt(0).toUpperCase()+entries.name.slice(1)}</p>) : ""}</div>
         </div>
       ) : (
         ""

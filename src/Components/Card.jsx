@@ -30,7 +30,7 @@ function Card() {
             {pokemons.map((p, index)=>(
                 <Link to={`/pokemon/${p.data.id}`} key={index}>
                       <img src={p.data.sprites.front_default} alt={p.name} />
-                     <h3>{p.data.name}</h3>
+                     <h3>{p.data.name.charAt(0).toUpperCase()+p.data.name.slice(1)}</h3>
                     
                 </Link>             
             ))}

@@ -16,9 +16,10 @@ const PokeHatch = ({ pokemon }) => {
  
   return (
     <div>
+      <div className="font-bold text-center">Hatch Time</div>
         {pokemonHatch.hatch_counter ? ( 
             <div>
-                <p>Hatch timer: {(pokemonHatch.hatch_counter+1)*255}steps to hatch.</p>
+                <p className="text-center">{(pokemonHatch.hatch_counter+1)*255} steps to hatch</p>
             </div>
         ) : (
         ""
