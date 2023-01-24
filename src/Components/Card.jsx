@@ -26,12 +26,11 @@ function Card() {
   return (
     <div>
         {loading && <div>Loading...</div>}
-        <div className="container grid grid-cols-8 mx-auto border-2">
+        <div className="container grid grid-cols-8 mx-auto  rounded-lg mt-20 gap-x-2">
             {pokemons.map((p, index)=>(
-                <Link to={`/pokemon/${p.data.id}`} key={index}>
-                      <img src={p.data.sprites.front_default} alt={p.name} />
-                     <h3>{p.data.name.charAt(0).toUpperCase()+p.data.name.slice(1)}</h3>
-                    
+                <Link to={`/pokemon/${p.data.id}`} key={index} >
+                      <img src={p.data.sprites.front_default} alt={p.name} className="border-black border-2 w-full rounded-lg bg-red-200"/>
+                     <h3 className="text-center border-black border-2 mx-1 rounded-sm text-lg">{p.data.name.charAt(0).toUpperCase()+p.data.name.slice(1)}</h3> 
                 </Link>             
             ))}
         </div> 

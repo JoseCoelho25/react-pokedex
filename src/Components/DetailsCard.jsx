@@ -31,8 +31,8 @@ function DetailsCard() {
       
     return (
       <PokeBg pokemon={pokemon}>
-        <div className="p-2">
-        <PokeNameId pokemon={pokemon}/>
+        <div className="p-5">
+          <PokeNameId pokemon={pokemon}/>
         
         {/* ternary operator to allow the request for the API sprites */}
         {pokemon.sprites && pokemon.sprites.front_default ? 
@@ -43,23 +43,23 @@ function DetailsCard() {
             <PokeTypes pokemon={pokemon} className=""/>
          </div>
   
-        <PokeAbility pokemon={pokemon} />
+          <PokeAbility pokemon={pokemon} />
 
-        <div className="grid grid-cols-2 mt-5">
-          <PokeGender pokemon={pokemon}/>
-          <PokeSpecies pokemon={pokemon}/>
-        </div>
+          <div className="grid grid-cols-2 mt-10">
+            <PokeGender pokemon={pokemon}/>
+            <PokeSpecies pokemon={pokemon}/>
+          </div>
         
-        <div className="text-center font-bold mt-5">Breeding</div>
-        <div className="grid grid-cols-2">
-          <PokeEggs pokemon={pokemon}/>
-          <PokeHatch pokemon={pokemon}/>
-        </div>
+          <div className="text-center font-bold mt-5">Breeding</div>
+          <div className="grid grid-cols-2">
+            <PokeEggs pokemon={pokemon}/>
+            <PokeHatch pokemon={pokemon}/>
+          </div>
         
         <PokeDimensions pokemon={pokemon}/>
          
       </div>
-      </PokeBg>
+    </PokeBg>
       
       
     );

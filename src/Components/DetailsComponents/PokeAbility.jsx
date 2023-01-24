@@ -32,7 +32,7 @@ function PokeAbility({ pokemon }) {
                 {ability.effect_entries.length !== 0? 
                 ability.effect_entries
                 .filter(entry => entry.language.name === "en")
-                .map(entry => <p key={keygen()} className="bg-white rounded-lg">{entry.effect}</p>)
+                .map(entry => <p key={keygen()} className="bg-white rounded-lg h-full">{entry.effect}</p>)
                 :''}
             </div>
             ))}

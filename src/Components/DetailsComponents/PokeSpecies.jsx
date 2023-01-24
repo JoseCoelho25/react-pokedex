@@ -17,7 +17,7 @@ const PokeSpecies = ({ pokemon }) => {
     <div>
       <div className="font-bold text-center">Catch Rate</div>
       {pokemonSpecies.capture_rate ? (
-        <div className="bg-white rounded-lg">
+        <div className="bg-white rounded-lg ml-1">
           <p className="text-center">Capture Rate: {pokemonSpecies.capture_rate}</p>
           <p className="text-center">Percentage Capture rate : {Math.round(pokemonSpecies.capture_rate/255*100)}%</p>
         </div>

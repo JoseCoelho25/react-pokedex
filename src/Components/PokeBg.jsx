@@ -22,13 +22,13 @@ function PokeBg({pokemon, children}) {
                     setBgColor("bg-blue-400")
                     break;
                 case "grass":
-                    setBgColor("bg-green-600")
+                    setBgColor("bg-green-400")
                     break;
                 case "electric":
                     setBgColor("bg-yellow-400");
                     break;
                 case "ground":
-                    setBgColor("bg-stone-600");
+                    setBgColor("bg-yellow-700");
                     break;
                 case "fairy":
                     setBgColor("bg-red-300");
@@ -47,6 +47,12 @@ function PokeBg({pokemon, children}) {
                     break;
                 case "ice":
                     setBgColor("bg-blue-200");
+                    break;
+                case "bug":
+                    setBgColor("bg-green-600");
+                    break;
+                case "rock":
+                    setBgColor("bg-yellow-900");
                     break;
                 default:
                     setBgColor("bg-neutral-400")
