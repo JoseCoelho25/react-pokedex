@@ -7,7 +7,9 @@ function Navbar() {
 
   return (
     <div className="container flex justify-between mx-auto">
-      <img src={Logo} alt="logo" className=""/>
+      <Link to="/">
+        <img src={Logo} alt="logo" className=""/>
+      </Link>
       <div className="flex gap-x-8 my-5">
         <Link>Categories</Link>
         <Link>Contact Us</Link>
