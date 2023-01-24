@@ -18,7 +18,7 @@ const PokeGender = ({ pokemon }) => {
       <div className="font-bold text-center">Gender ratio</div>
       {pokemonSpecies.gender_rate ? (
         <div>
-          <p className="text-center">{pokemonSpecies.gender_rate/8*100}% changes of being female and {(8-pokemonSpecies.gender_rate)/8*100}% changes of being male!</p>
+          <p className="text-center bg-white rounded-lg">{pokemonSpecies.gender_rate/8*100}% changes of being female and {(8-pokemonSpecies.gender_rate)/8*100}% changes of being male!</p>
         </div>
       ) : (
         ""

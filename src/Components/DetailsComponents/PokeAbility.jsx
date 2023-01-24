@@ -24,15 +24,15 @@ function PokeAbility({ pokemon }) {
     <div>
         {pokemonAbility.length !== 0 ?
         // ternary to display columns by array.length
-         <div className={`grid text-center ${pokemonAbility.length === 1 ? `grid-cols-1` : pokemonAbility.length === 2 ? `grid-cols-2` : `grid-cols-3`}`}>
+         <div className={`grid text-center gap-x-2 ${pokemonAbility.length === 1 ? `grid-cols-1` : pokemonAbility.length === 2 ? `grid-cols-2` : `grid-cols-3`}`}>
            {pokemonAbility.map((ability)=>(
             <div key={keygen()}>
-                <p className="font-bold  text-center">{ability.name.charAt(0).toUpperCase()+ability.name.slice(1)}</p>
+                <p className="font-bold  text-center ">{ability.name.charAt(0).toUpperCase()+ability.name.slice(1)}</p>
                 {/* needed a filter to display only the content in english */}
                 {ability.effect_entries.length !== 0? 
                 ability.effect_entries
                 .filter(entry => entry.language.name === "en")
-                .map(entry => <p key={keygen()} className="">{entry.effect}</p>)
+                .map(entry => <p key={keygen()} className="bg-white rounded-lg">{entry.effect}</p>)
                 :''}
             </div>
             ))}

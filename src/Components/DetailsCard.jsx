@@ -31,12 +31,12 @@ function DetailsCard() {
       
     return (
       <PokeBg pokemon={pokemon}>
-        <div className="">
+        <div className="p-2">
         <PokeNameId pokemon={pokemon}/>
         
         {/* ternary operator to allow the request for the API sprites */}
         {pokemon.sprites && pokemon.sprites.front_default ? 
-         <img src={pokemon.sprites.front_default} alt={pokemon.name} className="w-1/5 mx-auto bg-white rounded-xl"/>:
+         <img src={pokemon.sprites.front_default} alt={pokemon.name} className="w-1/5 mx-auto bg-white rounded-xl mt-2"/>:
          <p>Loading...</p>}
          <div className="flex w-1/4 mx-auto text-end text-2xl mt-5 mb-5">
             <div className="w-1/2">Type:</div>
