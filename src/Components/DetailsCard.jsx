@@ -9,6 +9,7 @@ import PokeEggs from './DetailsComponents/PokeEggs';
 import PokeHatch from './DetailsComponents/PokeHatch';
 import PokeDimensions from './DetailsComponents/PokeDimensions';
 import PokeNameId from './DetailsComponents/PokeNameId';
+import PokeBg from './PokeBg';
 
 
 function DetailsCard() {
@@ -26,10 +27,11 @@ function DetailsCard() {
         .catch(error => console.log(error));
         
     }, [id]);
-    
+   
       
     return (
-      <div className="container mx-auto w-full mt-20">
+      <PokeBg pokemon={pokemon}>
+        <div className="">
         <PokeNameId pokemon={pokemon}/>
         
         {/* ternary operator to allow the request for the API sprites */}
@@ -55,7 +57,11 @@ function DetailsCard() {
         </div>
         
         <PokeDimensions pokemon={pokemon}/>
+         
       </div>
+      </PokeBg>
+      
+      
     );
   }
   
