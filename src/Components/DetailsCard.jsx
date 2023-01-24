@@ -18,7 +18,10 @@ function DetailsCard() {
     useEffect(() => {
       axios
         .get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-        .then(response => setPokemon(response.data))
+        .then(response => {
+          response.data.name = response.data.name.charAt(0).toUpperCase() + response.data.name.slice(1);
+          setPokemon(response.data)
+        })
         .catch(error => console.log(error));
         
     }, [id]);
