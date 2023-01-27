@@ -26,7 +26,7 @@ function Card() {
   return (
     <div>
         {loading && <div>Loading...</div>}
-        <div className="container grid grid-cols-8 mx-auto  rounded-lg mt-20 gap-x-2">
+        <div className="container grid grid-cols-8 mx-auto  rounded-lg mt-32 gap-x-2">
             {pokemons.map((p, index)=>(
                 <Link to={`/pokemon/${p.data.id}`} key={index} >
                       <img src={p.data.sprites.front_default} alt={p.name} className="border-black border-2 w-full rounded-lg bg-red-200"/>
