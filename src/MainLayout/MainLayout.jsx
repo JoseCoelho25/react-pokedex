@@ -3,14 +3,14 @@ import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar'
 
 
-function MainLayout({children}) {
+function MainLayout({children, isCardLoaded}) {
   
 
   return (
     <div className="MainLayout">
       <Navbar />
       <main>{children}</main>
-      <Footer />
+      <Footer isCardLoaded={isCardLoaded}/>
     </div>
   )
 }

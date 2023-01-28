@@ -1,13 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Card from '../Components/Card';
 import MainLayout from '../MainLayout/MainLayout';
 
 function HomePage() {
- 
+  const [isCardLoaded, setIsCardLoaded] = useState(false);
 
   return (
-    <MainLayout>
-        <Card/>
+    <MainLayout isCardLoaded={isCardLoaded}>
+        <Card setIsCardLoaded={setIsCardLoaded}/>
     </MainLayout>
   )
 }
