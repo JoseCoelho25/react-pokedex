@@ -16,7 +16,7 @@ function Navbar() {
       x:2000,
       scrollTrigger:{
         trigger:el,
-        scrub:8,
+        scrub:4,
         start:"bottom 5%",
         markers:true
       }

@@ -1,35 +1,48 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import axios from "axios";
 import {Link} from "react-router-dom";
+import Poke from "../assets/imgs/pokeball.png";
+import gsap from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
-function Card({setIsCardLoaded}) {
+function Card() {
     const [pokemons, setPokemons] = useState([]);
     const [loading, setLoading] = useState(false);
-    
+    const imgRef = useRef(null);
 
     useEffect(()=>{
+        setLoading(true);
         setTimeout(()=>{
-            setLoading(true);
             getPokemons();
-        }, 2000); 
+        }); 
     },[])
   
     const getPokemons = ()=>{
         const endpoints = [];
-        for(let i=1; i <152; i++){
+        for(let i=1; i <387; i++){
             endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
         }
         axios.all(endpoints.map((endpoint)=> axios.get(endpoint)))
         .then((res)=>{
             setPokemons(res);
             setLoading(false);
-            setIsCardLoaded(true);
+            const el = imgRef.current;
+            const tl = gsap.timeline();
+            tl.to(el, {rotation:1500, duration:8});
         });
     };
    
   return (
     <div>
-        {loading && <div>Loading...</div>}
+        {loading && (
+        <div className="inset-x-0 bottom-0 h-2/3 absolute">
+            <div className="flex justify-center mt-12">
+                 <span className="text-6xl">Loading...</span>
+                <img src={Poke} alt="pokeball" className="h-24 w-24" ref={imgRef}/>
+            </div>
+        </div>
+        )}
         <div className="container grid grid-cols-8 mx-auto  rounded-lg mt-32 mb-32 gap-x-2">
             {pokemons.map((p, index)=>(
                 <Link to={`/pokemon/${p.data.id}`} key={index} >
@@ -41,5 +54,4 @@ function Card({setIsCardLoaded}) {
     </div>
   )
 }
-
-export default Card
+export default Card;

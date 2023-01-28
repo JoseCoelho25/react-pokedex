@@ -64,7 +64,7 @@ function PokeBg({pokemon, children}) {
 
   
   return (
-    <div className={`container mx-auto w-full mt-20 ${bgColor} rounded-2xl`}>
+    <div className={`container mx-auto w-full mt-36 ${bgColor} rounded-2xl`}>
         {children}
     </div>
   )
