@@ -11,10 +11,10 @@ function Footer({isCardLoaded}) {
     const el = footerRef.current;
     console.log(el)
     gsap.to(el,{
-      x:1500,
+      y:400,
       scrollTrigger:{
         trigger:el,
-        scrub:8,
+        scrub:2,
         start:"top 100%",
         markers:{
           startColor:"blue"
@@ -26,7 +26,7 @@ function Footer({isCardLoaded}) {
 
   return (
     <div>
-    <footer className="mt-5 container mx-auto text-xl font-bold" ref={footerRef}>
+    <footer className="mt-5 mb-96 container mx-auto text-xl font-bold" ref={footerRef}>
       <div className="flex justify-center align-items-center">
         <p className="mr-1">Developed by</p>
         <a className="mhq"  href="https://linkedin/">

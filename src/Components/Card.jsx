@@ -8,8 +8,10 @@ function Card({setIsCardLoaded}) {
     
 
     useEffect(()=>{
-        setLoading(true);
-        getPokemons();
+        setTimeout(()=>{
+            setLoading(true);
+            getPokemons();
+        }, 2000); 
     },[])
   
     const getPokemons = ()=>{
