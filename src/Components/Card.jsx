@@ -20,7 +20,7 @@ function Card() {
   
     const getPokemons = ()=>{
         const endpoints = [];
-        for(let i=1; i <387; i++){
+        for(let i=1; i <152; i++){
             endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
         }
         axios.all(endpoints.map((endpoint)=> axios.get(endpoint)))
@@ -43,11 +43,11 @@ function Card() {
             </div>
         </div>
         )}
-        <div className="container grid grid-cols-8 mx-auto  rounded-lg mt-32 mb-32 gap-x-2">
+        <div className="container grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 mx-auto p-2 lg:p-6 rounded-lg mt-32 mb-32 gap-x-2">
             {pokemons.map((p, index)=>(
                 <Link to={`/pokemon/${p.data.id}`} key={index} >
                       <img src={p.data.sprites.front_default} alt={p.name} className="border-black border-2 w-full rounded-lg bg-red-200"/>
-                     <h3 className="text-center border-black border-2 mx-1 rounded-sm text-lg">{p.data.name.charAt(0).toUpperCase()+p.data.name.slice(1)}</h3> 
+                     <h3 className="text-center border-black border-2 mx-1 rounded-sm text-lg text-clip overflow-hidden">{p.data.name.charAt(0).toUpperCase()+p.data.name.slice(1)}</h3> 
                 </Link>             
             ))}
         </div> 

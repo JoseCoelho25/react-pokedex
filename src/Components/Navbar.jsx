@@ -16,34 +16,38 @@ function Navbar() {
       x:2000,
       scrollTrigger:{
         trigger:el,
-        scrub:4,
+        scrub:2,
         start:"bottom 5%",
-        markers:true
       }
     })
   },[])
 
   return (
-    <div >
-      <div className="container flex justify-between top-0 left-48 items-baseline fixed" ref={navRef}>
+    <div className="w-screen">
+      <div className="container flex justify-between top-0 2xl:left-44 mt-4 fixed max-w-screen-2xl px-6 lg:px-4" ref={navRef}>
       <Link to="/">
         <img src={Logo} alt="logo" className=""/>
       </Link>
-      <div className="flex gap-x-8 my-5 text-2xl ">
-        <Link >Contact Us</Link>
-        <Link>Suggestions</Link>
+      <div className="hidden sm:flex gap-x-8 my-5 text-2xl ">
+        <Link className="hover:underline underline-offset-4 decoration-2">Contact Me</Link>
+        <Link className="hover:underline underline-offset-4 decoration-2">Suggestions</Link>
       </div>
       
-
-      <button onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <div>X</div> : <div>&#9776;</div>}
+      <div className="sm:hidden">
+        <button className="w-full" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? 
+        <div className="text-4xl text-end">X</div>
+         : 
+         <div className="text-4xl">&#9776;</div>}
       </button>
-      {isOpen && <div>
-        <div>Categories</div>
-        <div>Contact Us</div>
-        <div>Suggestions</div>
+      {isOpen && <div className="bg-white rounded-lg p-2 w-48">
+        <div className="hover:bg-blue-400 rounded-lg p-1">Categories</div>
+        <div className="hover:bg-blue-400 rounded-lg p-1">Contact Me</div>
+        <div className="hover:bg-blue-400 rounded-lg p-1">Suggestions</div>
         </div>
         }
+      </div>
+      
     </div>
     </div>
     

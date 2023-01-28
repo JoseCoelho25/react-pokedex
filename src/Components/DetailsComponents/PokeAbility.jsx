@@ -19,7 +19,6 @@ function PokeAbility({ pokemon }) {
         }
       }, [pokemon]);
 
-      console.log(pokemonAbility.length)
   return (
     <div>
         {pokemonAbility.length !== 0 ?
