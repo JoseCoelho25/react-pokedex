@@ -29,8 +29,8 @@ function Navbar() {
         <img src={Logo} alt="logo" className=""/>
       </Link>
       <div className="hidden sm:flex gap-x-8 my-5 text-2xl ">
-        <Link className="hover:underline underline-offset-4 decoration-2">Contact Me</Link>
-        <Link className="hover:underline underline-offset-4 decoration-2">Suggestions</Link>
+        <Link to="/contact" className="hover:underline underline-offset-4 decoration-2">Contact Me</Link>
+        <Link to="/suggestion" className="hover:underline underline-offset-4 decoration-2">Suggestions</Link>
       </div>
       
       <div className="sm:hidden">

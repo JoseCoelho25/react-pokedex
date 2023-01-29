@@ -3,6 +3,8 @@ import './App.css';
 import DetailsPage from './Pages/DetailsPage';
 import Homepage from "./Pages/HomePage";
 import { useEffect } from 'react';
+import ContactPage from './Pages/ContactPage';
+import SuggestionPage from './Pages/SuggestionPage';
 
 function App() {
   function ScrollToTop() {
@@ -22,6 +24,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage/>} />
           <Route path="/pokemon/:id" element={<DetailsPage/>}/>
+          <Route path="/contact" element={<ContactPage/>}/>
+          <Route path="/suggestion" element={<SuggestionPage/>}/>
         </Routes>
       </BrowserRouter>
     </div>
