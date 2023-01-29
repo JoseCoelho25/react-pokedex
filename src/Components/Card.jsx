@@ -37,7 +37,7 @@ function Card() {
     <div>
         {loading && (
         <div className="inset-x-0 bottom-0 h-2/3 absolute">
-            <div className="flex justify-center mt-12">
+            <div className="flex justify-center  mt-36 md:mt-2 lg:mt-48">
                  <span className="text-6xl">Loading...</span>
                 <img src={Poke} alt="pokeball" className="h-24 w-24" ref={imgRef}/>
             </div>
