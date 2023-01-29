@@ -22,7 +22,7 @@ npm install
 
 npm run dev
 
-See it live https://react-flix-sooty.vercel.app/
+See it live https://react-pokedex-roan.vercel.app/
 
 ## Tools & Libraries
 
