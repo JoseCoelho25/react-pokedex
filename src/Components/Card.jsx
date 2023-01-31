@@ -33,7 +33,7 @@ function Card() {
                 tl.to(el, { rotation: 5500, duration: 15 });
                 setTimeout(() => {
                     resolve(axios.get(endpoint));
-                    tl.pause();
+                    //tl.pause();
                 }, 3500);
             });
         }));

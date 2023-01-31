@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
+import "../App.css";
 import Logo from "../assets/imgs/logo.png";
 import {Link} from "react-router-dom";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
+
 
 
 function Navbar() {
@@ -12,19 +14,21 @@ function Navbar() {
   const navRef = useRef(null);
   useEffect(()=>{
     const el = navRef.current;
-    gsap.to(el,{
-      x:2000,
-      scrollTrigger:{
-        trigger:el,
-        scrub:2,
-        start:"bottom 5%",
-      }
-    })
+     gsap.to(el,{
+       scrollTrigger:{
+         trigger:el,
+         scrub:2,
+         start:"bottom 20%",
+         end:"bottom 0%",
+         toggleClass:"toggle-nav",
+         markers:true,
+       }
+     })
   },[])
 
   return (
     <div className="w-screen">
-      <div className="container flex justify-between top-0 2xl:left-44 mt-4 fixed max-w-screen-2xl px-6 lg:px-4" ref={navRef}>
+      <div className="container flex justify-between top-0 2xl:left-44 mt-4 fixed max-w-screen-2xl px-4 rounded-xl bg-black" ref={navRef}>
       <Link to="/">
         <img src={Logo} alt="logo" className=""/>
       </Link>
@@ -36,11 +40,11 @@ function Navbar() {
       <div className="sm:hidden">
         <button className="w-full" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? 
-        <div className="text-4xl text-end">X</div>
+        <div className="text-4xl text-end text-white">X</div>
          : 
-         <div className="text-4xl">&#9776;</div>}
+         <div className="text-4xl text-white">&#9776;</div>}
       </button>
-      {isOpen && <div className="bg-white rounded-lg p-2 w-48">
+      {isOpen && <div className="bg-white rounded-lg p-2 w-36">
         <div className="hover:bg-blue-400 rounded-lg p-1">Categories</div>
         <div className="hover:bg-blue-400 rounded-lg p-1">Contact Me</div>
         <div className="hover:bg-blue-400 rounded-lg p-1">Suggestions</div>
