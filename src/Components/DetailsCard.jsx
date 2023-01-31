@@ -38,9 +38,9 @@ function DetailsCard() {
         {pokemon.sprites && pokemon.sprites.front_default ? 
          <img src={pokemon.sprites.front_default} alt={pokemon.name} className="w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/5 mx-auto bg-white rounded-xl mt-2"/>:
          <p>Loading...</p>}
-         <div className="flex w-1/4 mx-auto text-end text-2xl mt-5 mb-5">
-            <div className="w-1/2">Type:</div>
-            <PokeTypes pokemon={pokemon} className=""/>
+         <div className="flex w-1/2 mx-auto text-start text-2xl mt-5 mb-5">
+            <div className="mr-2">Type:</div>
+            <PokeTypes pokemon={pokemon} />
          </div>
   
           <PokeAbility pokemon={pokemon} />
