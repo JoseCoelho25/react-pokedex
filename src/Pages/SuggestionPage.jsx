@@ -90,7 +90,7 @@ function SuggestionPage() {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.request}
-                placeholder="Suggestions & advise"
+                placeholder="Suggestions & advice"
                 className="focus:outline-none border-b w-full my-2 border-sky-400 placeholder-gray-500 h-48 pb-40"
               />
               

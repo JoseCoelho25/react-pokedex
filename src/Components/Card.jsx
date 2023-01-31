@@ -34,7 +34,7 @@ function Card() {
                 setTimeout(() => {
                     resolve(axios.get(endpoint));
                     //tl.pause();
-                }, 3500);
+                }, 2500);
             });
         }));
         setPokemons(results);

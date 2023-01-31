@@ -30,7 +30,7 @@ function DetailsCard() {
    
       
     return (
-      <PokeBg pokemon={pokemon} >
+      <PokeBg pokemon={pokemon}>
         <div className="p-5">
           <PokeNameId pokemon={pokemon}/>
         
