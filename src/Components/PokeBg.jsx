@@ -5,7 +5,6 @@ function PokeBg({pokemon, children}) {
     const [bgColor, setBgColor] = useState("");
     
 
-
     useEffect(() => {
         if (pokemon.types) {
           const promises = pokemon.types.map((type) => axios.get(type.type.url));

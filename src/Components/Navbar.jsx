@@ -7,7 +7,6 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 
-
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
