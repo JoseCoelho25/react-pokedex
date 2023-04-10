@@ -1,9 +1,9 @@
 body{
-    background-color: rgb(216, 59, 59);
-    margin: 0 1rem 0 1rem;
+    background-color: #DC0A2D;
+    margin: 0 ;
 }
 
 .toggle-nav{
-    background-color: rgb(216, 59, 59);
+    background-color: #DC0A2D;
     color: black;
 }

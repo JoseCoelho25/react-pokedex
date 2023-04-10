@@ -12,49 +12,55 @@ function PokeBg({pokemon, children}) {
             .then(() => {
               switch(pokemon.types[0].type.name){
                 case "fire":
-                    setBgColor("bg-orange-600")
+                    setBgColor("bg-[#F57D31]")
                     break;
                 case "poison":
-                    setBgColor("bg-violet-700")
+                    setBgColor("bg-[#7B61FF]")
                     break;
                 case "water":
-                    setBgColor("bg-blue-400")
+                    setBgColor("bg-[#6493EB]")
                     break;
                 case "grass":
-                    setBgColor("bg-green-400")
+                    setBgColor("bg-[#74CB48]")
                     break;
                 case "electric":
-                    setBgColor("bg-yellow-400");
+                    setBgColor("bg-[#F9CF30]");
                     break;
                 case "ground":
-                    setBgColor("bg-yellow-700");
+                    setBgColor("bg-[#DEC16B]");
                     break;
                 case "fairy":
-                    setBgColor("bg-red-300");
+                    setBgColor("bg-[#E69EAC]");
                     break;
                 case "fighting":
-                    setBgColor("bg-red-600");
+                    setBgColor("bg-[#C12239]");
                     break;
                 case "psychic":
-                    setBgColor("bg-violet-500");
+                    setBgColor("bg-[#FB5584]");
                     break;
                 case "dragon":
-                    setBgColor("bg-blue-900");
+                    setBgColor("bg-[#7037FF]");
                     break;
                 case "ghost":
-                    setBgColor("bg-indigo-900");
+                    setBgColor("bg-[#70559B]");
                     break;
                 case "ice":
-                    setBgColor("bg-blue-200");
+                    setBgColor("bg-[#9AD6DF]");
                     break;
                 case "bug":
-                    setBgColor("bg-green-600");
+                    setBgColor("bg-[#A7B723]");
                     break;
                 case "rock":
-                    setBgColor("bg-yellow-900");
+                    setBgColor("bg-[#B69E31]");
+                    break;
+                case "steel":
+                    setBgColor("bg-[#B7B9D0]");
+                    break;
+                case "dark":
+                    setBgColor("bg-[#75574C]");
                     break;
                 default:
-                    setBgColor("bg-neutral-400")
+                    setBgColor("bg-[#AAA67F]")
             }
             })
             .catch((error) => console.log(error));
@@ -63,7 +69,7 @@ function PokeBg({pokemon, children}) {
 
   
   return (
-    <div className={`container mx-auto w-full mt-36 ${bgColor} rounded-2xl`}>
+    <div className={`container mx-auto w-full mt-28 ${bgColor} rounded-2xl`}>
         {children}
     </div>
   )
