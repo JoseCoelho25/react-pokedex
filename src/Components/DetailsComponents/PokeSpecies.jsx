@@ -14,7 +14,7 @@ const PokeSpecies = ({ pokemon }) => {
   }, [pokemon]);
 
   return (
-    <div className="my-8">
+    <div className="my-6">
       {pokemonSpecies.flavor_text_entries && pokemonSpecies.flavor_text_entries.length > 0 && (
             <p className="text-center px-2"> {pokemonSpecies.flavor_text_entries[0].flavor_text}</p>
           )}

@@ -2,8 +2,6 @@ import React from 'react';
 import weight from '../../assets/imgs/weight.png'
 import ruler from '../../assets/imgs/ruler.png'
 
-const keygen = () => Date.now().toString() + Math.random()
-
 function PokeDimensions({pokemon}) {
      
   return (

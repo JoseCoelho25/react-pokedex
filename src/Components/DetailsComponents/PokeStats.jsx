@@ -14,7 +14,7 @@ function PokeStats({pokemon, bgColor}) {
           <div key={keygen()} className="bg-white grid grid-cols-4 rounded-full">
             <div className="text-xs">{entry.stat.name}</div>
             <div className="text-sm">{entry.base_stat}</div>
-            <div className={`${bgColor} h-1/2 rounded-full col-span-2 w-[${entry.base_stat}px] border self-center`}></div>
+            <div style={{ width: `${entry.base_stat}px` }} className={`${bgColor} h-1/2 rounded-full col-span-2  border self-center`}></div>
           </div>
         ))}
       </div>
