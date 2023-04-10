@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+
 const PokeTypes = ({ pokemon,bgColor }) => {
   const [pokemonTypes, setPokemonTypes] = useState([]);
   const [bgSecondColor, setSecondBgColor] = useState("");
@@ -75,11 +76,11 @@ const PokeTypes = ({ pokemon,bgColor }) => {
   return (
     <div className="mx-auto text-center pt-10">
       {pokemonTypes.length !== 0 ? (
-        <div className={`grid ${gridColumns} gap-x-4 md:grid-cols-1 md:gap-x-2 md:w-auto`}>
+        <div className={`grid ${gridColumns} gap-x-4  md:gap-x-2 md:w-auto`}>
           {pokemonTypes.map((type, index) => (
             <div
               key={type}
-              className={`text-center py-2 rounded-md text-white ${
+              className={`text-center px-2 rounded-full text-white ${
                 index === 0 ? bgColor : bgSecondColor
               }`}
             >

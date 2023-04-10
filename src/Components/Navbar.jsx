@@ -26,7 +26,7 @@ function Navbar() {
 
   return (
     <div className="w-screen">
-      <div className="container flex justify-between top-0 2xl:left-44 left-0 mt-4 fixed max-w-screen-2xl px-4 rounded-xl bg-black" ref={navRef}>
+      <div className="container flex justify-between top-0 2xl:left-44 left-0 mt-4 fixed max-w-screen-2xl px-4 rounded-xl bg-black z-10" ref={navRef}>
       <Link to="/">
         <img src={Logo} alt="logo" className=""/>
       </Link>
