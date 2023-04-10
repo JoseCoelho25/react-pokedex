@@ -123,7 +123,7 @@ function DetailsCard() {
             <PokeHatch pokemon={pokemon}/>
           </div> */} 
         
-          <PokeStats pokemon={pokemon}/>
+          <PokeStats pokemon={pokemon} bgColor={bgColor}/>
          </div>
          
          
