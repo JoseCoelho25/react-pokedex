@@ -3,7 +3,6 @@ import axios from "axios";
 import { useParams } from 'react-router-dom';
 import PokeTypes from './DetailsComponents/PokeTypes';
 import PokeAbility from './DetailsComponents/PokeAbility';
-import PokeGender from './DetailsComponents/PokeGender';
 import PokeSpecies from './DetailsComponents/PokeSpecies';
 import PokeStats from './DetailsComponents/PokeStats'
 import PokeDimensions from './DetailsComponents/PokeDimensions';
@@ -91,18 +90,18 @@ function DetailsCard() {
     const color = bgColor.split("bg-");
 
     return (
-      <div className={`p-2 mt-10 ${bgColor} w-full md:w-1/3 mx-auto rounded-lg`}>
+      <div className={`p-2 mt-24 ${bgColor} w-full md:w-1/3 mx-auto rounded-lg`}>
       {isLoading ? (
         <p>Loading...</p>
       ) : (
         <>
           {pokemon.sprites && pokemon.sprites.front_default ? (
-            <div className={`${bgColor} w-full h-48`}>
+            <div className={`${bgColor} w-full h-48 md:h-36 mt-10`}>
               <PokeNameId pokemon={pokemon} bgColor={bgColor} />
               <img
                 src={pokemon.sprites.front_default}
                 alt={pokemon.name}
-                className={`w-full md:w-1/2 lg:w-1/3  mx-auto bg-no-bg rounded-xl mt-2 lg:pt-10`}
+                className={`w-full lg:w-1/2  mx-auto bg-no-bg rounded-xl mt-2 `}
               />
             </div>
           ) : null}
@@ -127,7 +126,7 @@ function DetailsCard() {
             <PokeStats pokemon={pokemon} bgColor={bgColor} />
           </div>
 
-          <PokeGender pokemon={pokemon} />
+          {/* <PokeGender pokemon={pokemon} /> */}
         </>
       )}
     </div>

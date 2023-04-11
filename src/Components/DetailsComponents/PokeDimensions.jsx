@@ -9,15 +9,15 @@ function PokeDimensions({pokemon}) {
       <div className="grid grid-cols-2 gap-x-2 h-full">
         <div className='grid grid-cols-1 content-between'>
           <div className='flex justify-around'>
-            <img src={ruler} alt="ruler" className='w-5 rotate-90' />
-            <div className="text-center bg-white rounded-lg">{pokemon.height*10}cm </div>
+            <img src={ruler} alt="ruler" className='w-5 rotate-90 my-3' />
+            <div className="text-center bg-white rounded-lg my-3">{pokemon.height*10}cm </div>
           </div>
           <div className="text-xs text-gray-500  text-center">Height</div>
         </div>
         <div className='grid grid-cols-1 content-between'>
           <div className='flex justify-around'>
-            <img src={weight} alt="weight" className='w-5' />
-            <div className="text-center bg-white rounded-lg">{pokemon.weight/10}Kg</div>
+            <img src={weight} alt="weight" className='w-5 my-3' />
+            <div className="text-center bg-white rounded-lg my-3">{pokemon.weight/10}Kg</div>
           </div>
           
           <div className="text-xs text-gray-500  text-center">Weight</div>
