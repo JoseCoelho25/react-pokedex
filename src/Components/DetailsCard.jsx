@@ -7,7 +7,7 @@ import PokeSpecies from './DetailsComponents/PokeSpecies';
 import PokeStats from './DetailsComponents/PokeStats'
 import PokeDimensions from './DetailsComponents/PokeDimensions';
 import PokeNameId from './DetailsComponents/PokeNameId';
-
+import Poke from '../assets/imgs/pokeball.png';
 
 
 function DetailsCard() {
@@ -92,7 +92,12 @@ function DetailsCard() {
     return (
       <div className={`p-2 mt-24 ${bgColor} w-full md:w-1/3 mx-auto rounded-lg`}>
       {isLoading ? (
-        <p>Loading...</p>
+        <div className="inset-x-0 bottom-0 h-2/3 absolute">
+        <div className="flex justify-center  mt-36 md:mt-2 lg:mt-48">
+          <span className="text-6xl">Loading...</span>
+          <img src={Poke} alt="pokeball" className="h-24 w-24" />
+        </div>
+      </div>
       ) : (
         <>
           {pokemon.sprites && pokemon.sprites.front_default ? (
